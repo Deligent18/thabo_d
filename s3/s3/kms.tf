@@ -4,6 +4,6 @@ resource "aws_kms_key" "backend-s3bucket-key" {
   enable_key_rotation     = true
 }
 
-resource "aws_kms_alias" "backend-s3bucket-key-alia
+resource "aws_kms_alias" "backend-s3bucket-key-alias"{
   target_key_id = aws_kms_key.backend-s3bucket-key.id
 }
